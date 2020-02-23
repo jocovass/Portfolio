@@ -4,7 +4,6 @@ import styled, { ThemeProvider } from 'styled-components';
 import theme from '../styles/theme';
 import SEO from '../seo';
 import GlobalStyles from '../styles/globalStyles';
-import Home from '../sections/Home/Home';
 
 const Wrapper = styled.div`
     width: 95%;
@@ -18,10 +17,9 @@ const Layout = ({ children }) => {
         <Wrapper>
             <ThemeProvider theme={theme}>
                 <SEO />
-                <Home />
-                {children}
                 <GlobalStyles />
-                <div id='about' style={{margin: '1000px 0', height: '400px'}}>about</div>
+                {children}
+                <div id='about' style={{margin: '1000px 0', height: '400px', boxShadow: '5px 5px 20px rgba(0,0,0,.1)'}}>about</div>
             </ThemeProvider>
         </Wrapper>
     )

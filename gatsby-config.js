@@ -64,6 +64,7 @@ module.exports = {
         ],
       },
     },
+    'gatsby-background-image',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {

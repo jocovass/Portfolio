@@ -13,7 +13,7 @@ const Logo = ({ image }) => {
               spy={true}
               smooth={true}
               offset={0}>
-            <Img fixed={image}/>
+            <Img fixed={image} />
         </LogoLink>
     )
 }

@@ -31,7 +31,8 @@ const NavItem = ({ nav }) => (
         <SCLink to={nav.toLowerCase()}
                 spy={true} 
                 smooth={true}
-                activeClass='active' >
+                activeClass='active'
+                offset={-100} >
             {nav}
         </SCLink>
     </Li>
