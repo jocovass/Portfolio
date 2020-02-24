@@ -1,16 +1,15 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import { Link as ScrollLink } from 'react-scroll';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-const GLink = styled(Link)`
+const style = css`
     display: inline-block;
     cursor: pointer;
-    font-size: 1.5rem;
+    font-size: ${({size}) => size};
     font-weight: 300;
     text-transform: uppercase;
     text-decoration: none;
-    padding: 1.2rem 2rem;
+    padding: ${({pad}) => pad};
     margin-left: ${({ type }) => type === 'primary' ? `0` : `4rem`};
     background-color: ${({ type }) => type === 'primary' ? `var(--clr-accent)` : `transparent`};
     color: var(--clr-primary);
@@ -24,9 +23,20 @@ const GLink = styled(Link)`
     }
 `;
 
-const Btn = ({ type, onPage, children }) => {
+const GLink = styled(Link)`
+    ${style}
+`;
 
-    return <GLink type={type} to="/contact">{children}</GLink>;
+const ALink = styled.a`
+    ${style}
+`;
+
+const Btn = ({ type, link, children, size='1.5rem', pad='1.2rem 2rem', ...rest}) => {
+    if(!link) {
+        return <GLink type={type} to="/contact" pad={pad} size={size} {...rest}>{children}</GLink>;
+    } else {
+        return <ALink type={type} pad={pad} size={size} {...rest}>{children}</ALink>
+    }
 };
 
 export default Btn;

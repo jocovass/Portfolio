@@ -7,7 +7,7 @@ import GlobalStyles from '../styles/globalStyles';
 
 const Wrapper = styled.div`
     width: 95%;
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
 `;
 

@@ -19,7 +19,7 @@ const Wrapper = styled.header`
 const Content = styled.div`
     width: 100%;
     height: 100%;
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -39,7 +39,7 @@ const Header = () => {
         }
     `);
     
-    console.log(data)
+    
     return (
         <Wrapper>
             <Content>

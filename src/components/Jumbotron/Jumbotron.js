@@ -10,7 +10,7 @@ const ImgBackground = styled(BackgroundImage)`
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 70%;
+    width: 80%;
     height: 45rem;
     margin-top: 7.4rem;
     transform: translate(-50%, -50%);
@@ -73,8 +73,8 @@ const Jumbotron = () => {
                         <br />
                         Self taught Front-end Developer, based in Liverpool
                     </Title>
-                    <Btn type='primary' >Get In Touch</Btn>
-                    <Btn type='secondary'>Get In Touch</Btn>
+                    <Btn type='primary'>Get In Touch</Btn>
+                    <Btn type='secondary' link>Curriculum</Btn>
                     </Content>
                 </BackgroundOverlay>
             </ImgBackground>
