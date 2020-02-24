@@ -7,12 +7,13 @@ import Project from '../../templates/Project';
 
 const Wrapper = styled.section`
     text-align: center;
+    margin-bottom: 3rem;
 `;
 
 const Content = styled.div`
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
 `;
 
 const Projects = () => {
@@ -22,6 +23,7 @@ const Projects = () => {
                 filter: {
                 sourceInstanceName: { eq: "src" }
                 extension: { eq: "md" }
+                relativeDirectory: { regex: "/projects/"}
                 }
                 sort: { fields: [dir], order: DESC }
               ) {

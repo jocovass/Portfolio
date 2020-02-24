@@ -5,7 +5,7 @@ const Line = styled.span`
     display: block;
     width: 9rem;
     height: 1px;
-    margin: 3rem auto 6rem;
+    margin: 3rem auto 4.5rem;
     background-color: var(--clr-primary);
 `;
 

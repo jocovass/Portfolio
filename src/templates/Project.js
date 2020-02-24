@@ -40,12 +40,12 @@ const Project = (props) => {
                          link 
                          href={live}
                          size='1.2rem'
-                         pad='.75rem 1.5rem'>Check it live</Btn>
+                         pad='.75rem 1.3rem'>Check it live</Btn>
                     <Btn type="secondary" 
                          link 
                          href={source}
                          size='1.2rem'
-                         pad='.75rem 1.5rem'>Sourcecode</Btn>
+                         pad='.75rem 1.3rem'>Sourcecode</Btn>
                 </FigCap>
             </Fig>
         </Wrapper>

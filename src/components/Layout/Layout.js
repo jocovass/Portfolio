@@ -19,7 +19,6 @@ const Layout = ({ children }) => {
                 <SEO />
                 <GlobalStyles />
                 {children}
-                <div id='about' style={{margin: '1000px 0', height: '400px', boxShadow: '5px 5px 20px rgba(0,0,0,.1)'}}>about</div>
             </ThemeProvider>
         </Wrapper>
     )

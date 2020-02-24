@@ -26,13 +26,17 @@ const SCLink = styled(ScrollLink)`
     }
 `;
 
+function calcOffset() {
+    return -(window.innerHeight / 2);
+}
+
 const NavItem = ({ nav }) => (
     <Li>
         <SCLink to={nav.toLowerCase()}
                 spy={true} 
                 smooth={true}
                 activeClass='active'
-                offset={-100} >
+                offset={calcOffset()} >
             {nav}
         </SCLink>
     </Li>
