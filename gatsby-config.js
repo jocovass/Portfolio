@@ -14,7 +14,7 @@ module.exports = {
       twitter: 'joco.codes',
       instagram: 'joco.codes',
       linkedin: 'joco.codes',
-      github: 'joco.codes',
+      github: 'jocovass',
       email: 'joco.codes@gmail.com',
     },
     imageShare: 'share.jpg',
@@ -22,6 +22,7 @@ module.exports = {
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
+    'gatsby-plugin-sass',
     {
       resolve: 'gatsby-source-filesystem',
       options: {

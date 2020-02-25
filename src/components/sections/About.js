@@ -7,7 +7,7 @@ import Btn from '../uiElements/Btn';
 
 const Wrapper = styled.section`
     text-align: center;
-    margin-bottom: 11rem;
+    margin-bottom: 3rem;
 `;
 
 const Content = styled.div`
@@ -16,7 +16,7 @@ const Content = styled.div`
     margin: 0 auto 4.5rem;
 
     & > p {
-        font-size: 1.4rem;
+        font-size: 1.6rem;
         font-weight: 300;
         margin-bottom: 1rem;
     }

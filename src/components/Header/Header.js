@@ -1,5 +1,4 @@
 import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
 import Logo from '../Logo/Logo';
 import Navigation from '../Navigation/Navigation';
@@ -27,23 +26,11 @@ const Content = styled.div`
 `;
 
 const Header = () => {
-    const data = useStaticQuery(graphql`
-        query {
-            file(relativePath: {eq: "images/logo.png"}) {
-                childImageSharp {
-                    fixed(width: 115, quality: 80) {
-                        ...GatsbyImageSharpFixed_tracedSVG
-                    }
-                }
-            }
-        }
-    `);
-    
     
     return (
         <Wrapper>
             <Content>
-                <Logo image={data.file.childImageSharp.fixed}/>
+                <Logo />
                 <Navigation />
             </Content>
         </Wrapper>
