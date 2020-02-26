@@ -11,6 +11,7 @@ const Global = createGlobalStyle`
 
     html {
         font-size: 62.5%;
+        font-weight: 300;
         --clr-primary: ${props => props.theme.colors.primary};
         --clr-accent: ${props => props.theme.colors.accent};
         --clr-secondary: ${props => props.theme.colors.secondary};

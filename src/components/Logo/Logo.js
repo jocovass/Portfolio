@@ -12,7 +12,7 @@ const SLink = styled(ScrollLink)`
 const GLink = styled(Link)`
     cursor: pointer;
 `;
-const Logo = ({ image, onPage }) => {
+const Logo = ({ onPage }) => {
     const data = useStaticQuery(graphql`
         query {
             file(relativePath: {eq: "images/logo.png"}) {

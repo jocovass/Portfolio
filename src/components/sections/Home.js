@@ -12,7 +12,7 @@ const Wrapper = styled.section`
 const Home = () => {
     return (
         <Wrapper id="home">
-            <Header />
+            <Header onPage />
             <Jumbotron />
         </Wrapper>
     )
