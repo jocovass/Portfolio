@@ -16,6 +16,13 @@ const IconLink = styled.a`
     border: 2px solid var(--clr-accent);
     border-radius: 50%;
     margin: 0 1rem;
+    transition: all .3s ease-in-out; 
+
+    &:hover,
+    &:focus {
+        transform: scale(1.1) translateY(-5px);
+        box-shadow: 0 20px 5px rgba(0, 0, 0, .2);
+    }
 `;
 
 const Icon = styled(FontAwesomeIcon)`

@@ -10,11 +10,11 @@ const NavList = styled.ul`
     height: 100%;
 `;
 
-const NavItems = () => {
+const NavItems = ({ mainPage }) => {
 
     function renderNavItems() {
         return NAV_ITEMS.map((val, i) => {
-            return <NavItem key={val} nav={val}/>
+            return <NavItem key={val} nav={val} mainPage={mainPage} />
         })
     }
 

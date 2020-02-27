@@ -36,16 +36,18 @@ const Project = (props) => {
             <Fig>
                 <Image fluid={image.childImageSharp.fluid} alt={title} />
                 <FigCap>
-                    <Btn type="primary" 
+                    <Btn kind="primary" 
                          link 
                          href={live}
                          size='1.2rem'
-                         pad='.75rem 1.3rem'>Check it live</Btn>
-                    <Btn type="secondary" 
+                         pad='.75rem 1.3rem'
+                         target="_blank">Check it live</Btn>
+                    <Btn kind="secondary" 
                          link 
                          href={source}
                          size='1.2rem'
-                         pad='.75rem 1.3rem'>Sourcecode</Btn>
+                         pad='.75rem 1.3rem'
+                         target="_blank">Sourcecode</Btn>
                 </FigCap>
             </Fig>
         </Wrapper>

@@ -6,11 +6,11 @@ const Nav = styled.nav`
     height: 100%;
 `;
 
-const Navigation = () => {
+const Navigation = ({ mainPage }) => {
 
     return (
         <Nav>
-            <NavItems />
+            <NavItems mainPage={mainPage} />
         </Nav>
     );
 };

@@ -5,7 +5,8 @@ import Projects from '../components/sections/Projects';
 import About from '../components/sections/About';
 import Footer from '../components/sections/Footer';
 
-const HomePage = () => {
+const HomePage = (props) => {
+    console.log(props)
     return (
         <Layout>
             <Home />

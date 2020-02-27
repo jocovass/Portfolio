@@ -7,15 +7,16 @@ import Footer from '../components/sections/Footer';
 import HorizontalLine from '../components/uiElements/horizontalLine';
 import { btnStyle } from '../components/uiElements/Btn';
 
+
 const Wrapper = styled.section`
     position: relative;
     text-align: center;
-    padding-top: 15rem;
+    padding-top: 11rem;
     overflow: hidden;
 `;
 
 const Content = styled.div`
-    height: calc(100vh - 40.6rem);
+    height: calc(100vh - 36.6rem);
     min-height: 60rem;
 `;
 

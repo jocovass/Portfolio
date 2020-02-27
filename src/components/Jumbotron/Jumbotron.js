@@ -73,8 +73,8 @@ const Jumbotron = () => {
                         <br />
                         Self taught Front-end Developer, based in Liverpool
                     </Title>
-                    <Btn type='primary'>Get In Touch</Btn>
-                    <Btn type='secondary' link>Curriculum</Btn>
+                    <Btn kind='primary'>Get In Touch</Btn>
+                    <Btn kind='secondary' link>Curriculum</Btn>
                     </Content>
                 </BackgroundOverlay>
             </ImgBackground>

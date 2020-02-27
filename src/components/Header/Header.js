@@ -25,13 +25,13 @@ const Content = styled.div`
     align-items: center;
 `;
 
-const Header = ({ onPage }) => {
+const Header = ({ mainPage }) => {
     
     return (
         <Wrapper>
             <Content>
-                <Logo onPage={onPage}/>
-                <Navigation />
+                <Logo />
+                <Navigation mainPage={mainPage} />
             </Content>
         </Wrapper>
     )
