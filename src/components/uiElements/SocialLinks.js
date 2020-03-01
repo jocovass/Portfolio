@@ -26,7 +26,7 @@ const IconLink = styled.a`
 `;
 
 const Icon = styled(FontAwesomeIcon)`
-    font-size: 2rem;
+    font-size: 2.2rem;
 `;
 
 const SocialLinks = () => {

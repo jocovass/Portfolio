@@ -6,6 +6,11 @@ import Btn from '../components/uiElements/Btn';
 const Wrapper = styled.div`
     flex-basis: 40%;
     margin-bottom: 8rem;
+
+    @media ${props => props.theme.mq.medium} {
+        flex-basis: 90%;
+        max-width: 500px;
+    }
 `;
 
 const Title = styled.h3`
@@ -40,13 +45,13 @@ const Project = (props) => {
                          link 
                          href={live}
                          size='1.2rem'
-                         pad='.75rem 1.3rem'
+                         pad='1rem 1.4rem'
                          target="_blank">Check it live</Btn>
                     <Btn kind="secondary" 
                          link 
                          href={source}
                          size='1.2rem'
-                         pad='.75rem 1.3rem'
+                         pad='1rem 1.4rem'
                          target="_blank">Sourcecode</Btn>
                 </FigCap>
             </Fig>

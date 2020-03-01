@@ -6,7 +6,13 @@ import styled, { css } from 'styled-components';
 const Li = styled.li`
     &:not(:last-of-type) {
         margin-right: .5rem;
+
+        @media ${props => props.theme.mq.small} {
+            margin: 0;
+            border-bottom: 2px solid rgba(0, 0, 0, .1);
+        }
     }
+    
 `;
 
 const navStyles = css`
@@ -27,6 +33,12 @@ const navStyles = css`
     &.active {
         background-color: var(--clr-accent);
     }
+
+    @media ${props => props.theme.mq.small} {
+        display: block;
+        padding: 3rem;
+        text-align: center;
+    }
 `;
 
 const GLink = styled(Link)`
@@ -41,18 +53,18 @@ function calcOffset() {
     return -(window.innerHeight / 2);
 }
 
-const NavItem = ({ nav, mainPage }) => {
+const NavItem = ({ nav, mainPage, toggle }) => {
     function renderNavItem() {
         if(mainPage && nav === 'Contact') {
             return (
-                <GLink to="/contact">
+                <GLink to="/contact" onClick={toggle}>
                     {nav}
                 </GLink>
             )
         } else if(!mainPage && nav !== 'Contact') {
             if(nav === 'Home') {
                 return (
-                    <GLink to="/">
+                    <GLink to="/" onClick={toggle}>
                         {nav}
                     </GLink>
                 )
@@ -63,7 +75,8 @@ const NavItem = ({ nav, mainPage }) => {
                         spy={true} 
                         smooth={true}
                         activeClass='active'
-                        offset={calcOffset()} >
+                        offset={calcOffset()}
+                        onClick={toggle} >
                     {nav}
                 </SCLink>
             );

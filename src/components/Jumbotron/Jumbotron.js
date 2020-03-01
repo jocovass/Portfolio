@@ -21,6 +21,15 @@ const ImgBackground = styled(BackgroundImage)`
     &::after {
         border-radius: 55px 0 55px 0;
     }
+
+    @media ${props => props.theme.mq.medium} {
+        width: 95%;
+    }
+    
+    @media ${props => props.theme.mq.small} {
+        height: 40rem;
+    }
+
 `;
 
 const BackgroundOverlay = styled.div`
@@ -35,8 +44,8 @@ const BackgroundOverlay = styled.div`
 `;
 
 const Title = styled.h1`
-    font-size: 2rem;
-    font-weight: 300;
+    font-size: 1.8rem;
+    font-weight: inherit;
     margin-bottom: 4rem;
 `;
 
@@ -45,6 +54,10 @@ const Content = styled.div`
     top: 50%;
     left: 8rem;
     transform: translateY(-50%);
+
+    @media ${props => props.theme.mq.small} {
+        left: 3rem;
+    }
 `;
 
 const Jumbotron = () => {

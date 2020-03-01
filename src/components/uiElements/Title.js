@@ -15,7 +15,7 @@ const UnderLine = styled.span`
 const title = ({type, children}) => {
     const StyledTitle = styled[type]`
         display: inline-block;
-        font-size: 4rem;
+        font-size: 3.8rem;
         font-weight: 900;
         position: relative;
         margin: .75rem 0 1.5rem;

@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { CSSTransition } from 'react-transition-group';
 import styled from 'styled-components';
 import Logo from '../Logo/Logo';
-import Navigation from '../Navigation/Navigation';
+import Navigation from '../Navigation/MobileNav';
+import Hamburger from '../uiElements/Hamburger';
+import DesktopNav from '../Navigation/DesktopNav';
 
 
 const Wrapper = styled.header`
@@ -16,9 +19,13 @@ const Wrapper = styled.header`
 `;
     
 const Content = styled.div`
+    background-color: var(--clr-secondary);
+    position: relative;
+    z-index: 100;
     width: 100%;
     height: 100%;
     max-width: 1200px;
+    padding: 0 2rem;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -26,12 +33,42 @@ const Content = styled.div`
 `;
 
 const Header = ({ mainPage }) => {
-    
+    const [open, setOpen] = useState(false);
+    const [mobile, setMobile] = useState(false);
+
+    function checkWindowSize() {
+        window.matchMedia('(max-width: 37.5em)').matches ? setMobile(true) : setMobile(false); 
+    }
+
+    useEffect(() => {
+        checkWindowSize();
+        window.addEventListener('resize', checkWindowSize);
+
+        return () => {
+            window.removeEventListener('resize', checkWindowSize);
+            setMobile(false);
+        };
+    }, [])
+
+    const toggle = () => {
+        setOpen(!open);
+    }
     return (
         <Wrapper>
             <Content>
-                <Logo />
-                <Navigation mainPage={mainPage} />
+                <Logo mainPage={mainPage} />
+                {mobile ? (
+                    <>
+                        <Hamburger open={open} toggle={toggle}/>
+                        <CSSTransition in={open}
+                            timeout={300}
+                            classNames="open"
+                            unmountOnExit
+                            appear>
+                            <Navigation mainPage={mainPage} toggle={toggle} />
+                        </CSSTransition>
+                    </>
+                ) : <DesktopNav mainPage={mainPage} />}
             </Content>
         </Wrapper>
     )

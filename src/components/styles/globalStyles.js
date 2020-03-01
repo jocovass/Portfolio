@@ -15,6 +15,14 @@ const Global = createGlobalStyle`
         --clr-primary: ${props => props.theme.colors.primary};
         --clr-accent: ${props => props.theme.colors.accent};
         --clr-secondary: ${props => props.theme.colors.secondary};
+
+        @media ${props => props.theme.mq.large} {
+            font-size: 56.25%;
+        }
+
+        @media ${props => props.theme.mq.medium} {
+            font-size: 50%;
+        }
     }
     
     body {
