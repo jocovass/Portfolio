@@ -50,7 +50,7 @@ const SCLink = styled(ScrollLink)`
 `;
 
 function calcOffset() {
-    if(window) {
+    if(typeof window !== 'undefined') {
         return -(window.innerHeight / 2);
     }
 }
