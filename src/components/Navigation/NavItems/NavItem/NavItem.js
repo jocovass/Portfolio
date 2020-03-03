@@ -50,7 +50,9 @@ const SCLink = styled(ScrollLink)`
 `;
 
 function calcOffset() {
-    return -(window.innerHeight / 2);
+    if(window) {
+        return -(window.innerHeight / 2);
+    }
 }
 
 const NavItem = ({ nav, mainPage, toggle }) => {
