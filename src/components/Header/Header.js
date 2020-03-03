@@ -32,7 +32,7 @@ const Content = styled.div`
     align-items: center;
 `;
 
-const Header = ({ mainPage }) => {
+const Header = ({ mainPage, error }) => {
     const [open, setOpen] = useState(false);
     const [mobile, setMobile] = useState(false);
 
@@ -53,22 +53,33 @@ const Header = ({ mainPage }) => {
     const toggle = () => {
         setOpen(!open);
     }
+
+    function renderNav() {
+        if(error){
+            return null;
+        } else if(mobile) {
+            return (
+                <>
+                    <Hamburger open={open} toggle={toggle}/>
+                    <CSSTransition in={open}
+                        timeout={300}
+                        classNames="open"
+                        unmountOnExit
+                        appear>
+                        <Navigation mainPage={mainPage} toggle={toggle} />
+                    </CSSTransition>
+                </>
+            );
+        } else {
+            return <DesktopNav mainPage={mainPage} />;
+        }
+    }
+
     return (
         <Wrapper>
             <Content>
                 <Logo mainPage={mainPage} />
-                {mobile ? (
-                    <>
-                        <Hamburger open={open} toggle={toggle}/>
-                        <CSSTransition in={open}
-                            timeout={300}
-                            classNames="open"
-                            unmountOnExit
-                            appear>
-                            <Navigation mainPage={mainPage} toggle={toggle} />
-                        </CSSTransition>
-                    </>
-                ) : <DesktopNav mainPage={mainPage} />}
+                { renderNav() }
             </Content>
         </Wrapper>
     )
