@@ -1,6 +1,6 @@
 ---
-title: "Snake / game"
-live: "https://nostalgic-ramanujan-31714a.netlify.com/"
-source: "https://github.com/jocovass/snake"
-image: "project-1.jpg"
+title: "MyAlb / gallery"
+live: "https://wonderful-leavitt-c2650c.netlify.com/"
+source: "https://github.com/jocovass/MayAlb"
+image: "myalb.png"
 ---

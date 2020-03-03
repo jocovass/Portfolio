@@ -2,5 +2,5 @@
 title: "Weather App"
 live: "https://objective-kowalevski-3e25b2.netlify.com/"
 source: "https://github.com/jocovass/weather-app"
-image: "project-2.jpg"
+image: "weather-app.png"
 ---

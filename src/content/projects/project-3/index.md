@@ -1,6 +1,6 @@
 ---
-title: "Netflix / front-recreation"
-live: "https://jovial-morse-5ac19f.netlify.com/"
-source: "https://github.com/jocovass/netflix"
-image: "project-3.jpg"
+title: "Snake - game"
+live: "https://nostalgic-ramanujan-31714a.netlify.com/"
+source: "https://github.com/jocovass/snake"
+image: "snake.png"
 ---
