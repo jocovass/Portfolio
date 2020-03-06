@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import NavItems from './NavItems/NavItems';
 
 const Nav = styled.nav`
-    transition: all 300ms ease-in-out;
+    transition: all 200ms ease-in-out;
     
     @media ${props => props.theme.mq.small} {
         box-shadow: 0 5px 5px rgba(0,0,0, .3);
@@ -23,17 +23,17 @@ const Nav = styled.nav`
     
         &.open-enter-active {
             opacity: 1;
-            height: 35rem;
+            height: ${props => props.mainPage ? '35rem' : '25rem'};
         }
 
         &.open-enter-done {
             opacity: 1;
-            height: 35rem;
+            height: ${props => props.mainPage ? '35rem' : '25rem'};
         }
     
         &.open-exit {
             opacity: 1;
-            height: 35rem;
+            height: ${props => props.mainPage ? '35rem' : '25rem'};
         }
     
         &.open-exit-active {
@@ -51,7 +51,7 @@ const Nav = styled.nav`
 const MobileNav = ({ mainPage, toggle }) => {
 
     return (
-        <Nav>
+        <Nav mainPage={mainPage}>
             <NavItems mainPage={mainPage} toggle={toggle}/>
         </Nav>
     );

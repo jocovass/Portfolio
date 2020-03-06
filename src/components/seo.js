@@ -10,6 +10,7 @@ const SEO = ({ title, description, image, pathname, article, meta, lang }) => {
                 siteMetadata {
                     defaultTitle: title
                     defaultDescription: description
+                    siteUrl
                     author
                     imageShare 
                     social {
@@ -24,7 +25,7 @@ const SEO = ({ title, description, image, pathname, article, meta, lang }) => {
         title: title || site.siteMetadata.defaultTitle,
         description: description || site.siteMetadata.defaultDescription,
         image: `${site.siteMetadata.siteUrl}/${image || site.siteMetadata.imageShare}`,
-        // url: `${siteUrl}${pathname || '/'}`,
+        url: `${site.siteMetadata.siteUrl}${pathname || '/'}`,
         type: article ? 'article' : 'website',
     };
 
@@ -42,10 +43,10 @@ const SEO = ({ title, description, image, pathname, article, meta, lang }) => {
                     name: 'image',
                     content: seo.image,
                 },
-                // {
-                //     property: 'og:url',
-                //     content: seo.url,
-                // },
+                {
+                    property: 'og:url',
+                    content: seo.url,
+                },
                 {
                     property: 'og:title',
                     content: seo.title,
@@ -59,8 +60,20 @@ const SEO = ({ title, description, image, pathname, article, meta, lang }) => {
                     content: seo.image,
                 },
                 {
+                    property: 'og:image:type',
+                    content: 'image/jpg'
+                },
+                {
                     property: 'og:type',
                     content: seo.type,
+                },
+                {
+                    property: 'og:image:width',
+                    content: '620',
+                },
+                {
+                    property: 'og:image:height',
+                    content: '541',
                 },
                 {
                     name: 'twitter:card',
@@ -79,8 +92,16 @@ const SEO = ({ title, description, image, pathname, article, meta, lang }) => {
                     content: seo.description,
                 },
                 {
-                    property: 'twitter:image',
+                    name: 'twitter:image',
                     content: seo.image,
+                },
+                {
+                    name: 'twitter:image:width',
+                    content: '560'
+                },
+                {
+                    name: 'twitter:image:height',
+                    content: '300'
                 }
             ].concat(meta)} 
         />

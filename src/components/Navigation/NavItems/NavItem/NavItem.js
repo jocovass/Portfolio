@@ -24,7 +24,7 @@ const navStyles = css`
     font-weight: 400;
     text-transform: uppercase;
     height: 100%;
-    padding: 3rem 1.5rem 2rem;
+    padding: 3.2rem 1rem 1.5rem;
 
     &:hover {
         background-color: rgba(250, 250, 250, .1);

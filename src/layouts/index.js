@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { ThemeProvider } from 'styled-components';
-import theme from '../styles/theme';
-import SEO from '../seo';
-import GlobalStyles from '../styles/globalStyles';
+import theme from '../components/styles/theme';
+import SEO from '../components/seo';
+import GlobalStyles from '../components/styles/globalStyles';
 
 const Wrapper = styled.div`
     width: 95%;

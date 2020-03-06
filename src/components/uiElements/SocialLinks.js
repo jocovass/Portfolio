@@ -45,7 +45,6 @@ const SocialLinks = () => {
         }
     `);
     
-    console.log(social);
     return (
         <Wrapper>
             <IconLink href={`https://github.com/${social.github}`} target="_blank">

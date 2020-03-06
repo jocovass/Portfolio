@@ -9,7 +9,7 @@ module.exports = {
     title: 'Joco | Front-end Developer',
     description: 'I am Joco, self taught Web Developer based in Liverpool.',
     author: 'Joco',
-    // siteUrl: 'www.jococodes.com',
+    siteUrl: 'http://jococodes.com',
     social: {
       twitter: 'joco.codes',
       instagram: 'joco.codes',
@@ -17,10 +17,23 @@ module.exports = {
       github: 'jocovass',
       email: 'joco.codes@gmail.com',
     },
-    imageShare: 'share.jpg',
+    imageShare: 'share.png',
   },
   plugins: [
+    {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        trackingId: 'UA-149385336-1',
+        heading: false,
+      }
+    },
     'gatsby-plugin-react-helmet',
+    {
+      resolve: 'gatsby-plugin-page-transitions',
+      options: {
+        transitionTime: 500,
+      }
+    },
     'gatsby-plugin-styled-components',
     {
       resolve: 'gatsby-source-filesystem',
@@ -70,10 +83,10 @@ module.exports = {
       options: {
         name: 'Joco | Front-end Developer',
         short_name: 'J.Codes',
-        icon: 'src/images/icon.png',
+        icon: 'src/images/app-icon.png',
         start_url: '/',
-        background_color: '#050532',
-        theme_color: '#050532',
+        background_color: '#333',
+        theme_color: '#333',
         display: 'standalone',
       },
     },

@@ -49,8 +49,6 @@ const Projects = () => {
         }
     `);
 
-    console.log(edges);
-
     function renderProjects() {
         return edges.map((val, index) => {
             return <Project key={val.node.childMarkdownRemark.id} 

@@ -32,13 +32,13 @@ const About = () => {
             }
         }
     `);
-    console.log(data)
+    
     return (
         <Wrapper id="about">    
             <Title type="h2">About Me</Title>
             <HorizontalLine />
             <Content dangerouslySetInnerHTML={{__html: data.file.childMarkdownRemark.html}}></Content>
-            <Btn kind="primary" size="1.3rem">Hire Me</Btn>
+            <Btn kind="primary" size="1.3rem" path="/contact">Hire Me</Btn>
             <Btn kind="secondary" link size="1.3rem">Curriculum</Btn>
         </Wrapper>
     );

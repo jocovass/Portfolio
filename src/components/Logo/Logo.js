@@ -27,7 +27,7 @@ const Logo = ({ mainPage }) => {
             }
         }
     `);
-    console.log(data)
+    
     if(mainPage) {
         return (
             <SLink to='home'

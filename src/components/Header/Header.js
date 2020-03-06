@@ -62,7 +62,7 @@ const Header = ({ mainPage, error }) => {
                 <>
                     <Hamburger open={open} toggle={toggle}/>
                     <CSSTransition in={open}
-                        timeout={300}
+                        timeout={200}
                         classNames="open"
                         unmountOnExit
                         appear>

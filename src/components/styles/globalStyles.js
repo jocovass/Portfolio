@@ -30,6 +30,7 @@ const Global = createGlobalStyle`
         color: var(--clr-primary);
         box-sizing: border-box;
         font-family: 'Merriweather', sans-serif;
+        overflow-x: hidden;
     }
 `;
 

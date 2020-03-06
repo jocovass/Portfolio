@@ -1,6 +1,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import Layout from '../components/Layout/Layout';
+import PageTransition from 'gatsby-plugin-page-transitions';
+import Layout from '../layouts/index';
 import Header from '../components/Header/Header';
 import Title from '../components/uiElements/Title';
 import Footer from '../components/sections/Footer';
@@ -68,6 +69,19 @@ const Button = styled.button`
 
 const Contact = () => {
     return (
+        <PageTransition
+            defaultStyle={{
+                transition: 'left 500ms cubic-bezier(0.47, 0, 0.75, 0.72',
+                left: '100%',
+                position: 'absolute',
+                width: '100%',
+            }}
+            transitionStyles={{
+                entering: {left: '0%'},
+                entered: {left: '0%'},
+                exiting: {left: '100%'},
+            }}
+        >
         <Layout>
             <Wrapper id="contact">
                 <Content>
@@ -95,6 +109,7 @@ const Contact = () => {
                 <Footer />
             </Wrapper>
         </Layout>
+        </PageTransition>
     )
 };
 
