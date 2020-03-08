@@ -4,7 +4,7 @@ import Header from '../Header/Header';
 import Jumbotron from '../Jumbotron/Jumbotron';
 
 const Wrapper = styled.section`
-    height: 80vh;
+    height: 75vh;
     min-height: 500px;
     position: relative;
 `;

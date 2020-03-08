@@ -33,9 +33,20 @@ const ALink = styled.a`
 
 const Btn = ({ kind, link, path, children, size='1.5rem', pad='1.2rem 2rem', ...rest}) => {
     if(!link) {
-        return <GLink kind={kind} to={path} pad={pad} size={size} {...rest}>{children}</GLink>;
+        return <GLink kind={kind} 
+                      to={path} 
+                      pad={pad} 
+                      size={size} 
+                      {...rest} >
+                          {children}
+               </GLink>;
     } else {
-        return <ALink kind={kind} pad={pad} size={size} {...rest}>{children}</ALink>
+        return <ALink kind={kind} 
+                      pad={pad} 
+                      size={size} 
+                      {...rest} >
+                          {children}
+               </ALink>;
     }
 };
 

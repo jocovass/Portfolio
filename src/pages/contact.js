@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 import PageTransition from 'gatsby-plugin-page-transitions';
 import Layout from '../layouts/index';
 import Header from '../components/Header/Header';
-import Title from '../components/uiElements/Title';
+import StyledTitle from '../components/uiElements/Title';
 import Footer from '../components/sections/Footer';
 import HorizontalLine from '../components/uiElements/horizontalLine';
 import { btnStyle } from '../components/uiElements/Btn';
@@ -17,7 +17,7 @@ const Wrapper = styled.section`
 `;
 
 const Content = styled.div`
-    height: calc(100vh - 36.6rem);
+    height: calc(100vh - 37rem);
     min-height: 60rem;
 `;
 
@@ -50,10 +50,6 @@ const inputStyle = css`
 
 const Input = styled.input`
     ${inputStyle}
-
-    // &:focus {
-    //     border-color: var(--clr-accent);
-    // }
 `;
 
 const Textarea = styled.textarea`
@@ -86,9 +82,9 @@ const Contact = () => {
             <Wrapper id="contact">
                 <Content>
                     <Header />
-                    <Title type="h3">Contact Me</Title>
+                    <StyledTitle type="h2">Contact Me</StyledTitle>
                     <HorizontalLine />
-                    <Form action="post">
+                    <Form method="POST" data-netlify="true" name="contact">
                         <Row>
                             <Label htmlFor="name">Name</Label>
                             <Input id="name" type="text" placeholder="Enter your name..." required/>

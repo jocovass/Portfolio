@@ -11,7 +11,7 @@ const Wrapper = styled.div`
         height: 2.8rem;
         cursor: pointer;
         transform: ${props => props.open? 'rotate(180deg)' : 'rotate(0deg)'};
-        transition: transform .25s ease-in-out;
+        transition: transform .15s ease-in-out;
     }
 `;
 
@@ -48,7 +48,7 @@ const Line = styled.span`
 `;
 
 const Hamburger = ({ toggle, open }) => {
-    console.log(open);
+    
     return (
         <Wrapper onClick={toggle} open={open} className="toggle">
             <Line open={open}/>

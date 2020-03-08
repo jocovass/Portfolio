@@ -7,7 +7,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Joco | Front-end Developer',
-    description: 'I am Joco, self taught Web Developer based in Liverpool.',
+    description: 'I am Joco, a self taught Web Developer based in Liverpool.',
     author: 'Joco',
     siteUrl: 'http://jococodes.com',
     social: {
@@ -83,7 +83,19 @@ module.exports = {
       options: {
         name: 'Joco | Front-end Developer',
         short_name: 'J.Codes',
-        icon: 'src/images/app-icon.png',
+        icon: 'src/images/icon.png',
+        icons: [
+          {
+            src: 'images/app-icon.png',
+            sizes: '192x192',
+            type: 'image/png',
+          },
+          {
+            src: 'images/app-icon-big.png',
+            sizes: '512x512',
+            type: 'image/png',
+          }
+        ],
         start_url: '/',
         background_color: '#333',
         theme_color: '#333',

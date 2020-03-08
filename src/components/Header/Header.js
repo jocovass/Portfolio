@@ -2,14 +2,14 @@ import React, { useState, useEffect } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import styled from 'styled-components';
 import Logo from '../Logo/Logo';
-import Navigation from '../Navigation/MobileNav';
+import MobileNav from '../Navigation/MobileNav';
 import Hamburger from '../uiElements/Hamburger';
 import DesktopNav from '../Navigation/DesktopNav';
 
 
 const Wrapper = styled.header`
-    position: fixed;
     z-index: 100;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -19,12 +19,12 @@ const Wrapper = styled.header`
 `;
     
 const Content = styled.div`
-    background-color: var(--clr-secondary);
+    z-index: 101;
     position: relative;
-    z-index: 100;
     width: 100%;
     height: 100%;
     max-width: 1200px;
+    background-color: var(--clr-secondary);
     padding: 0 2rem;
     margin: 0 auto;
     display: flex;
@@ -66,7 +66,7 @@ const Header = ({ mainPage, error }) => {
                         classNames="open"
                         unmountOnExit
                         appear>
-                        <Navigation mainPage={mainPage} toggle={toggle} />
+                        <MobileNav mainPage={mainPage} toggle={toggle} />
                     </CSSTransition>
                 </>
             );

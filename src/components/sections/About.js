@@ -1,7 +1,7 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
-import Title from '../uiElements/Title'
+import StyledTitle from '../uiElements/Title'
 import HorizontalLine from '../uiElements/horizontalLine';
 import Btn from '../uiElements/Btn';
 
@@ -18,7 +18,8 @@ const Content = styled.div`
     & > p {
         font-size: 1.6rem;
         font-weight: 300;
-        margin-bottom: 1rem;
+        line-height: 1.4;
+        margin-bottom: 2rem;
     }
 `;
 
@@ -35,7 +36,7 @@ const About = () => {
     
     return (
         <Wrapper id="about">    
-            <Title type="h2">About Me</Title>
+            <StyledTitle type="h2">About Me</StyledTitle>
             <HorizontalLine />
             <Content dangerouslySetInnerHTML={{__html: data.file.childMarkdownRemark.html}}></Content>
             <Btn kind="primary" size="1.3rem" path="/contact">Hire Me</Btn>

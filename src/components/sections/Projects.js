@@ -1,7 +1,7 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
-import Title from '../uiElements/Title';
+import StyledTitle from '../uiElements/Title';
 import HorizontalLine from '../uiElements/horizontalLine';
 import Project from '../../templates/Project';
 
@@ -58,7 +58,7 @@ const Projects = () => {
 
     return (
         <Wrapper id="projects">
-            <Title type="h2">My Projects</Title>
+            <StyledTitle type="h2">My Projects</StyledTitle>
             <HorizontalLine />
             <Content>
                 {renderProjects()}

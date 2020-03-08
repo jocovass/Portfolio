@@ -36,7 +36,7 @@ const navStyles = css`
 
     @media ${props => props.theme.mq.small} {
         display: block;
-        padding: 3rem;
+        padding: 3rem 0;
         text-align: center;
     }
 `;
@@ -69,7 +69,7 @@ const NavItem = ({ nav, mainPage, toggle }) => {
                     <GLink to="/" onClick={toggle}>
                         {nav}
                     </GLink>
-                )
+                );
             }
         } else {
             return (
