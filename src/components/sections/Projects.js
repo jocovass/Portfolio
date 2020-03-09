@@ -36,8 +36,8 @@ const Projects = () => {
                                 source
                                 image {
                                     childImageSharp {
-                                        fluid(maxWidth: 800, quality: 75) {
-                                            ...GatsbyImageSharpFluid_tracedSVG
+                                        fluid(maxWidth: 800) {
+                                            ...GatsbyImageSharpFluid_withWebp
                                         }
                                     }
                                 }
@@ -48,6 +48,8 @@ const Projects = () => {
             }
         }
     `);
+
+    console.log(edges)
 
     function renderProjects() {
         return edges.map((val, index) => {

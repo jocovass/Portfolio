@@ -49,7 +49,8 @@ const Project = (props) => {
                          href={live}
                          size='1.2rem'
                          pad='1rem 1.4rem'
-                         target="_blank">
+                         target="_blank"
+                         rel="noopener noreferrer">
                              <FontAwesomeIcon icon={faLink}/>
                              Check it live
                         </Btn>
@@ -58,7 +59,8 @@ const Project = (props) => {
                          href={source}
                          size='1.2rem'
                          pad='1rem 1.4rem'
-                         target="_blank">
+                         target="_blank"
+                         rel="noreferrer noopener">
                              <FontAwesomeIcon icon={faGithub}/>
                              Sourcecode
                     </Btn>

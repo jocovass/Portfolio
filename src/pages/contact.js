@@ -84,7 +84,7 @@ const Contact = () => {
                     <Header />
                     <StyledTitle type="h2">Contact Me</StyledTitle>
                     <HorizontalLine />
-                    <Form method="POST" data-netlify="true" name="contact">
+                    <Form action="POST" data-netlify="true" name="contact">
                         <Row>
                             <Label htmlFor="name">Name</Label>
                             <Input id="name" type="text" placeholder="Enter your name..." required/>

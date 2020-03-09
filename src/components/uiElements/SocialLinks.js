@@ -47,16 +47,16 @@ const SocialLinks = () => {
     
     return (
         <Wrapper>
-            <IconLink href={`https://github.com/${social.github}`} target="_blank">
+            <IconLink href={`https://github.com/${social.github}`} target="_blank" rel="noopener noreferrer" aria-label="Github link">
                 <Icon icon={faGithub} />
             </IconLink>
-            <IconLink href={`https://instagram.com/${social.instagram}`} target="_blank">
+            <IconLink href={`https://instagram.com/${social.instagram}`} target="_blank" rel="noopener noreferrer" aria-label="Instagram link">
                 <Icon icon={faInstagram} />
             </IconLink>
-            <IconLink href={`https://github.com/${social.github}`} target="_blank">
+            <IconLink href={`https://github.com/${social.github}`} target="_blank" rel="noopener noreferrer" aria-label="Linkedin link">
                 <Icon icon={faLinkedin} />
             </IconLink>
-            <IconLink href={`https://github.com/${social.github}`} target="_blank">
+            <IconLink href={`https://github.com/${social.github}`} target="_blank" rel="noopener noreferrer" aria-label="Twitter link">
                 <Icon icon={faTwitter} />
             </IconLink>
         </Wrapper>
