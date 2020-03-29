@@ -33,14 +33,14 @@ const About = () => {
             }
         }
     `);
-    
+
     return (
-        <Wrapper id="about">    
+        <Wrapper id="about">
             <StyledTitle type="h2">About Me</StyledTitle>
             <HorizontalLine />
             <Content dangerouslySetInnerHTML={{__html: data.file.childMarkdownRemark.html}}></Content>
             <Btn kind="primary" size="1.3rem" path="/contact">Hire Me</Btn>
-            <Btn kind="secondary" link size="1.3rem">Curriculum</Btn>
+            <Btn kind="secondary" path="./cv.pdf" size="1.3rem" download link>Curriculum</Btn>
         </Wrapper>
     );
 };

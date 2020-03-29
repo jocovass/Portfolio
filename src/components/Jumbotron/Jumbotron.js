@@ -25,7 +25,7 @@ const ImgBackground = styled(BackgroundImage)`
     @media ${props => props.theme.mq.medium} {
         width: 95%;
     }
-    
+
     @media ${props => props.theme.mq.small} {
         height: 40rem;
     }
@@ -79,14 +79,14 @@ const Jumbotron = () => {
                 <BackgroundOverlay>
                     <div>
                         <h1>
-                            Hello, I am 
+                            Hello, I am
                             <br />
                             <StyledTitle type='span'>Jozsef Vass</StyledTitle>
                             <br />
                             Self taught Front-end Developer, based in Liverpool
                         </h1>
                         <Btn kind='primary' path="/contact">Get In Touch</Btn>
-                        <Btn kind='secondary' link>Curriculum</Btn>
+                        <Btn kind='secondary' path="./cv.pdf" download link>Curriculum</Btn>
                     </div>
                 </BackgroundOverlay>
             </ImgBackground>

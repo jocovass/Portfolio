@@ -1,7 +1,8 @@
-I am Joco, 26 years old self taught Web Developer from Romania,
-living in Liverpool,UK at the moment.
+I am Joco, 26 years old self taught Web Developer based in Liverpool,UK.
 
-I am very ambitious person who knows what he wants, and I work hard to achieve my goals.
+I am a hard working person and a technology enthusiast who likes to creat
+modern, good looking webpages that are also superfast. I am highly motivated
+to continuously improve my skills and to grow professionally.
 My primary focus is Front-end Development at the moment, but
 I would like to become a Full-stack Developer in the future.
 
